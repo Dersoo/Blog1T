@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Guestbook";
+}
+
+<div style="float:left ">
+    <h3>Гостевая</h3>
+    <table>
+        @foreach (var r in ViewBag.reviews)
+        {
+            <tr>
+                <td><p>@r.Rname</p></td>
+                <td><p>@r.Rdate</p></td>
+                <td><p>@r.Rtext</p></td>
+            </tr>
+        }
+    </table>
+</div>
+<div>
+    <h4>Оставить отзыв</h4>
+    <form method="post">
+        <input type="hidden" name="Rid" value="@ViewBag.Rid" />
+        <table>
+            <tr>
+                <td><p>Введите свое имя</p></td>
+                <td><input type="text" name="Rname" /></td>
+            </tr>
+            <tr>
+                <td><p>Отзыв:</p></td>
+                <td>
+                    <input type="text" name="Rtext" />
+                </td>
+            </tr>
+            <tr><td><input type="submit" value="Оставить" /></td><td></td></tr>
+        </table>
+    </form>
+</div>

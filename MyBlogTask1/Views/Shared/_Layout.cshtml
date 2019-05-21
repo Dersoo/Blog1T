@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <h1>Блог о растениеводстве</h1>
+    </header>
+    <div class="content">
+        @RenderBody()
+    </div>
+    <div class="sidebar">
+        <h3>Меню</h3>
+        <nav>
+            <ul class="menu">
+                <li>@Html.ActionLink("Главная", "Index", "Home")</li>
+                <li>@Html.ActionLink("Гостевая", "Guestbook", "Home")</li>
+                <li>@Html.ActionLink("Анкета", "Questionary", "Home")</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="footer">
+        Copyright Mikaiel Harakian
+    </div>
+</body>
+</html>

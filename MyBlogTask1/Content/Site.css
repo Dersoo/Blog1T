@@ -1,0 +1,91 @@
+﻿body {
+    font-size: 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f7f7fa;
+    padding-left: 40px;
+}
+
+nav {
+    display: block;
+}
+
+
+table {
+    vertical-align: middle;
+    text-align: left;
+}
+
+.header {
+    font-weight: bold;
+}
+
+td {
+    padding-right: 10px;
+}
+header {
+    width: 100%;
+    height: 200px;
+    background-image: url(/Content/flower.jpg);
+}
+header h1{
+    color: orangered;
+}
+.content {
+    width: 80%;
+    float: left;
+    style ="overflow: auto";
+}
+.sidebar {
+    float: right;
+}
+
+.menu {
+    padding-left: 10px;
+    list-style: none;
+}
+    .menu li {
+        position: relative;
+        padding: 10px 30px;
+        background: linear-gradient(to left, #ADCEE9 0%, #FFF, #ADCEE9);
+        border: 2px solid #337AB7;
+        color: #506a6b;
+        box-shadow: 0 5px 5px 0 rgba(0,0,0, .2);
+        margin-bottom: 5px;
+        text-align: center;
+        background-size: 100% 100%;
+        z-index: 1;
+    }
+
+.menu li:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    background: linear-gradient(to left, #EBF3FA 0%, #FFF, #EBF3FA);
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+.menu li:hover:before {
+    width: 100%;
+    opacity: 1;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    background: #39b54a;
+    color: #fff;
+    width: 100%;
+}
